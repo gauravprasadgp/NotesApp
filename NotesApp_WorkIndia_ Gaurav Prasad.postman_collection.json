@@ -8,7 +8,7 @@
 		{
 			"name": "User account registration:",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": ""
@@ -19,7 +19,7 @@
 		{
 			"name": "User account login",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": ""
@@ -41,7 +41,7 @@
 		{
 			"name": "Save a new note",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": ""
