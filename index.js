@@ -55,7 +55,8 @@ app.post('/app/user', (req, res) => {
     // getting a unique uuid for the new user
     var sql = "INSERT INTO users (userId,username,password) VALUES (?)";
     // sql query to save user
-    var values = [userId, username, password];
+    var hashedPassword = CryptoJS.AES.encrypt(password, secret).toString();
+    var values = [userId, username, hashedPassword];
     // values provided by user
     con.query(sql, [values], function (err, result) {
       if (err){
@@ -94,7 +95,11 @@ app.post('/app/user/auth', (req, res) => {
           status:400
         })
       }
-      if(result[0].password===password)
+      var bytes = CryptoJS.AES.decrypt(result[0].password, secret);
+      // to get the stored decrypted password
+      var originalPassword = bytes.toString(CryptoJS.enc.Utf8);
+      // stored in database in hashed format
+      if(originalPassword===password)
       // === to check the type as well as value
       // checking the password if the password matches with the user password it send the userId
       // else it responds as check your password
