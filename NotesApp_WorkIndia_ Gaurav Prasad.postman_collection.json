@@ -10,8 +10,32 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "gaurav",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/app/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"user"
+					]
 				}
 			},
 			"response": []
@@ -21,8 +45,33 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "gaurav",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/app/user/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"user",
+						"auth"
+					]
 				}
 			},
 			"response": []
@@ -33,7 +82,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/app/sites/list/?users=c28f0350-0496-11eb-98dd-e11240b42860",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"sites",
+						"list",
+						""
+					],
+					"query": [
+						{
+							"key": "users",
+							"value": "c28f0350-0496-11eb-98dd-e11240b42860"
+						}
+					]
 				}
 			},
 			"response": []
@@ -43,8 +109,33 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "note",
+							"value": "hello world 2",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8000/app/sites?users=c28f0350-0496-11eb-98dd-e11240b42860",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"app",
+						"sites"
+					],
+					"query": [
+						{
+							"key": "users",
+							"value": "c28f0350-0496-11eb-98dd-e11240b42860"
+						}
+					]
 				}
 			},
 			"response": []
